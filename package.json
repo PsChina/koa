@@ -1,0 +1,23 @@
+{
+  "name": "koa",
+  "version": "1.0.0",
+  "description": "阮一峰网络日志 koa demo 练习.",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "^2.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PsChina/koa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PsChina/koa/issues"
+  },
+  "homepage": "https://github.com/PsChina/koa#readme"
+}

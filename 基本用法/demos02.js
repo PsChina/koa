@@ -1,3 +1,4 @@
+// Context 对象
 const Koa = require('koa'); // 获取 koa
 const app = new Koa();  // 新建koa实例
 const main = ctx => { // main 函数
