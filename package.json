@@ -4,7 +4,9 @@
   "description": "阮一峰网络日志 koa demo 练习.",
   "main": "index.js",
   "dependencies": {
-    "koa": "^2.5.2"
+    "koa": "^2.5.2",
+    "koa-route": "^3.2.0",
+    "koa-static": "^5.0.0"
   },
   "devDependencies": {},
   "scripts": {

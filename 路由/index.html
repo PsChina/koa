@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Koa.</h1>
+    <div id="context"></div>
+    <button onclick="postData()">发post请求</button>
+</body>
+</html>
+<script>
+    function ajax(obj){
+        const xmlHttp = new XMLHttpRequest()
+        xmlHttp.open(obj.method, obj.url)
+        xmlHttp.onreadystatechange = function(){
+            try{
+                if(this.readyState!==4){
+                    return
+                }
+                if(this.status===200){
+                    obj.success(JSON.parse(this.response))
+                }else{
+                    obj.error(this.responseText)
+                }
+            }catch(e){
+                throw e
+            }
+        }
+        xmlHttp.send(JSON.stringify(obj.data))
+    }
+
+    function postData(){
+        ajax({
+            url:'http://localhost:3000/postData',
+            method:'POST',
+            data:{
+                param1:'one',
+                param2:'two'
+            },
+            success(result){
+                context.innerText = result.data
+            },
+            error(error){
+                context.innerText = error
+            }
+        })
+    }
+</script>
